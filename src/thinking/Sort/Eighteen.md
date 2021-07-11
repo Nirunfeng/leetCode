@@ -22,7 +22,7 @@
 参考三数之和的双指针法，再该问题中可设置两组循环，固定在每次循环时固定前两位，采用双指针法遍历头尾。
 
 解题步骤：
-
+```
 - 排序数组：Arrays.sort
 - 临界判断：
         数组长度小于4，return
@@ -32,5 +32,8 @@
         去除第二个数重复的情况，nums[j]=nums[j+1];continue
 - 双指针设置：
         start=j+1;end=nums.length-1;
-- 
-
+- sum=nums[i]+nums[j]+nums[start]+nums[end]
+- 指针偏移判断：
+        sum>target: end--
+        sum<target:start++
+```
