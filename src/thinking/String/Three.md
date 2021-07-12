@@ -30,3 +30,10 @@
 输出: 0
 ```
 ## 解题思路
+
+采用滑动窗口来定量解决长字符串中的逐字符问题
+- 定义Map<Charactor,Integer>数据结构存储字符串，将字符作为k，value值为该字符在字符串中的位置+1.
+- 定义双指针start、end：end作为遍历的标记。start作为不重复子串的开始。
+- 此时随着end的增加，[start,end]之间的字符串是不重复的(理论上)，当遇到与start所指的字符重复的字符，将指针start移至该位置，继续遍历end
+- 判断start偏移的条件：map.containsKey(s.charat(end))。偏移公式：max(map.get(s.charat(end)),start);
+
