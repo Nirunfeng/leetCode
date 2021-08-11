@@ -16,7 +16,6 @@
 - [排序相关解题思路](src/thinking/Sort)
 - [字符串](src/code/String)
 - [字符串相关解题思路](src/thinking/String)
--
 # Contributors
 - Nirunfeng
 
